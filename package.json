@@ -1,0 +1,204 @@
+{
+  "name": "ventaro-sales",
+  "version": "2.0.0",
+  "description": "Ventaro Sales - AI-Powered Sales Automation Platform. Transform your sales process with 300+ AI prompts, advanced automation tools, and expert coaching to boost revenue by 300%.",
+  "main": "index.html",
+  "homepage": "https://www.ventarosales.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChrisT19931/VentaroSales1.git"
+  },
+  "author": {
+    "name": "Ventaro Sales Team",
+    "email": "contact@ventarosales.com",
+    "url": "https://www.ventarosales.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "sales",
+    "automation",
+    "prompts",
+    "crm",
+    "lead-generation",
+    "conversion",
+    "revenue",
+    "coaching",
+    "analytics",
+    "saas",
+    "business",
+    "marketing",
+    "entrepreneur"
+  ],
+  "scripts": {
+    "start": "npx serve -s . -l 3000",
+    "dev": "npx live-server --port=3000 --host=localhost --open=/",
+    "build": "npm run optimize && npm run minify",
+    "optimize": "npm run optimize:images && npm run optimize:css && npm run optimize:js",
+    "optimize:images": "npx imagemin '*.{jpg,png,gif}' --out-dir=optimized --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant",
+    "optimize:css": "npx postcss styles.css --use autoprefixer --use cssnano --output styles.min.css",
+    "optimize:js": "npx terser script.js --compress --mangle --output script.min.js",
+    "minify": "npm run minify:html && npm run minify:css && npm run minify:js",
+    "minify:html": "npx html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html -o index.min.html",
+    "minify:css": "npx csso styles.css --output styles.min.css",
+    "minify:js": "npx uglify-js script.js --compress --mangle --output script.min.js",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "npx htmlhint index.html",
+    "lint:css": "npx stylelint styles.css",
+    "lint:js": "npx eslint script.js",
+    "format": "npm run format:html && npm run format:css && npm run format:js",
+    "format:html": "npx prettier --write index.html",
+    "format:css": "npx prettier --write styles.css",
+    "format:js": "npx prettier --write script.js",
+    "test": "npm run test:lighthouse && npm run test:accessibility && npm run test:performance",
+    "test:lighthouse": "npx lighthouse http://localhost:3000 --output=html --output-path=./reports/lighthouse.html",
+    "test:accessibility": "npx pa11y http://localhost:3000 --reporter html > ./reports/accessibility.html",
+    "test:performance": "npx web-vitals-cli http://localhost:3000",
+    "analyze": "npm run analyze:bundle && npm run analyze:deps",
+    "analyze:bundle": "npx bundlesize",
+    "analyze:deps": "npx depcheck",
+    "security": "npm audit && npx snyk test",
+    "validate": "npm run validate:html && npm run validate:css && npm run validate:manifest",
+    "validate:html": "npx html-validate index.html",
+    "validate:css": "npx css-validator styles.css",
+    "validate:manifest": "npx web-app-manifest-validator manifest.json",
+    "deploy": "npm run build && npm run deploy:surge",
+    "deploy:surge": "npx surge . ventarosales.surge.sh",
+    "deploy:netlify": "npx netlify deploy --prod --dir=.",
+    "deploy:vercel": "npx vercel --prod",
+    "pwa": "npm run pwa:audit && npm run pwa:generate",
+    "pwa:audit": "npx pwa-asset-generator --help",
+    "pwa:generate": "npx pwa-asset-generator logo.svg icons --manifest manifest.json",
+    "seo": "npm run seo:audit && npm run seo:sitemap",
+    "seo:audit": "npx seo-analyzer http://localhost:3000",
+    "seo:sitemap": "npx sitemap-generator http://localhost:3000 --file sitemap.xml",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "update": "npx npm-check-updates -u && npm install",
+    "precommit": "npm run lint && npm run test",
+    "prepare": "npx husky install"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "autoprefixer": "^10.4.16",
+    "bundlesize": "^0.18.1",
+    "css-validator": "^2.0.0",
+    "cssnano": "^6.0.1",
+    "csso-cli": "^4.0.2",
+    "depcheck": "^1.4.7",
+    "eslint": "^8.52.0",
+    "html-minifier": "^4.0.0",
+    "html-validate": "^8.7.0",
+    "htmlhint": "^1.1.4",
+    "husky": "^8.0.3",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "lighthouse": "^11.3.0",
+    "live-server": "^1.2.2",
+    "netlify-cli": "^17.6.0",
+    "npm-check-updates": "^16.14.6",
+    "pa11y": "^7.0.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.0.3",
+    "pwa-asset-generator": "^6.3.1",
+    "seo-analyzer": "^1.1.0",
+    "serve": "^14.2.1",
+    "sitemap-generator": "^8.5.1",
+    "snyk": "^1.1248.0",
+    "stylelint": "^15.11.0",
+    "surge": "^0.23.1",
+    "terser": "^5.24.0",
+    "uglify-js": "^3.17.4",
+    "vercel": "^32.5.0",
+    "web-app-manifest-validator": "^1.0.0",
+    "web-vitals-cli": "^1.0.3"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "intersection-observer": "^0.12.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "bundlesize": [
+    {
+      "path": "styles.css",
+      "maxSize": "50 kB"
+    },
+    {
+      "path": "script.js",
+      "maxSize": "30 kB"
+    },
+    {
+      "path": "index.html",
+      "maxSize": "20 kB"
+    }
+  ],
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "warn",
+      "prefer-const": "error",
+      "no-var": "error"
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "color-no-invalid-hex": true,
+      "font-family-no-duplicate-names": true,
+      "function-calc-no-unspaced-operator": true,
+      "string-no-newline": true,
+      "unit-no-unknown": true,
+      "property-no-unknown": true,
+      "declaration-block-no-duplicate-properties": true,
+      "selector-pseudo-class-no-unknown": true,
+      "selector-pseudo-element-no-unknown": true,
+      "selector-type-no-unknown": true,
+      "media-feature-name-no-unknown": true,
+      "at-rule-no-unknown": true,
+      "comment-no-empty": true,
+      "no-duplicate-at-import-rules": true,
+      "no-duplicate-selectors": true,
+      "no-empty-source": true,
+      "no-extra-semicolons": true,
+      "no-invalid-double-slash-comments": true
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
+}

@@ -3,84 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventaro Sales - The Best Online Platform For Entrepreneurs & Sales Professionals</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Transform your sales performance with Ventaro's premium sales solutions. Boost revenue, streamline processes, and achieve unprecedented growth.">
+    <meta name="keywords" content="sales solutions, revenue growth, sales automation, CRM, sales training">
+    <meta name="author" content="Ventaro Sales">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ventarosales.com/">
+    <meta property="og:title" content="Ventaro Sales - Premium Sales Solutions">
+    <meta property="og:description" content="Transform your sales performance with cutting-edge solutions designed for modern businesses.">
+    <meta property="og:image" content="https://ventarosales.com/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ventarosales.com/">
+    <meta property="twitter:title" content="Ventaro Sales - Premium Sales Solutions">
+    <meta property="twitter:description" content="Transform your sales performance with cutting-edge solutions designed for modern businesses.">
+    <meta property="twitter:image" content="https://ventarosales.com/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical CSS inline for performance -->
+    <style>
+        /* Critical above-the-fold styles */
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Inter',sans-serif;line-height:1.6;color:#333;background:#fff}
+        .header{background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.1);position:fixed;width:100%;top:0;z-index:1000}
+        .hero{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:120px 0 80px;text-align:center;margin-top:80px}
+    </style>
+    
+    <title>Ventaro Sales - Premium Sales Solutions | Transform Your Revenue</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap"></noscript>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ventaro Sales",
+      "url": "https://ventarosales.com",
+      "description": "AI-powered platform for entrepreneurs and sales professionals",
+      "offers": {
+        "@type": "Offer",
+        "name": "AI Sales Tools and Coaching",
+        "price": "24",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Loading spinner -->
+    <div id="loading-spinner" class="loading-spinner" aria-hidden="true">
+        <div class="spinner"></div>
+        <p>Loading Ventaro Sales...</p>
+    </div>
+    
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
             <div class="nav-container">
                 <div class="logo">
-                    <h1>Ventaro Sales</h1>
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea"/>
+                                    <stop offset="100%" style="stop-color:#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                            <rect width="32" height="32" rx="8" fill="url(#logoGradient)"/>
+                            <path d="M8 24L16 8L24 24H21L19 20H13L11 24H8Z" fill="white"/>
+                            <circle cx="16" cy="14" r="2" fill="#667eea"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-main">Ventaro</span>
+                        <span class="logo-sub">Sales</span>
+                    </div>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#ai-prompts-business">AI Prompts (Business)</a></li>
-                    <li><a href="#ai-prompts-sales">AI Prompts (Sales)</a></li>
-                    <li><a href="#ai-sales-pro">AI-Sales Pro 4.0</a></li>
-                    <li><a href="#coaching">Coaching Calls</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="#features" role="menuitem">Features</a></li>
+                    <li role="none"><a href="#pricing" role="menuitem">Pricing</a></li>
+                    <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-actions">
+                    <a href="#" class="btn-ghost">Sign In</a>
+                    <a href="#" class="btn-primary">
+                        <span>Get Started</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-container">
-                <h1 class="hero-title">The Best Online Platform For Entrepreneurs & Sales Professionals</h1>
-                <p class="hero-subtitle">Transform your business with AI-powered tools and expert coaching</p>
-                <div class="hero-cta">
-                    <a href="#pricing" class="btn btn-primary">Get Started Today</a>
+    <main id="main-content" role="main">
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-background">
+                <div class="hero-gradient"></div>
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge" role="img" aria-label="New feature announcement">
+                        <span class="badge-pulse"></span>
+                        <span class="badge-icon">✨</span>
+                        <span>New: AI Sales Pro 4.0 Now Available!</span>
+                    </div>
+                    <h1 id="hero-title" class="hero-title">
+                        Transform Your Sales with
+                        <span class="gradient-text">AI-Powered Solutions</span>
+                        <span class="title-highlight">That Actually Work</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Join <strong class="highlight-number">10,000+</strong> entrepreneurs and sales professionals who've increased their revenue by an average of <strong class="highlight-number">300%</strong> using our cutting-edge AI platform.
+                    </p>
+                    <div class="hero-stats" role="region" aria-label="Platform statistics">
+                        <div class="stat" data-aos="fade-up" data-aos-delay="100">
+                            <div class="stat-icon">🎯</div>
+                            <span class="stat-number" data-count="300">0</span>
+                            <span class="stat-label">AI Prompts</span>
+                        </div>
+                        <div class="stat" data-aos="fade-up" data-aos-delay="200">
+                            <div class="stat-icon">👥</div>
+                            <span class="stat-number" data-count="10000">0</span>
+                            <span class="stat-label">Active Users</span>
+                        </div>
+                        <div class="stat" data-aos="fade-up" data-aos-delay="300">
+                            <div class="stat-icon">📈</div>
+                            <span class="stat-number" data-count="95">0</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#pricing" class="btn btn-primary btn-glow" role="button" aria-describedby="primary-cta-desc">
+                            <span class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M13 7L7 13M7 7L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </span>
+                            Start Free Trial
+                            <span class="btn-arrow">→</span>
+                        </a>
+                        <button class="btn btn-secondary btn-glass" onclick="playDemoVideo()" aria-describedby="demo-cta-desc">
+                            <span class="btn-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M6.5 5.5L13.5 10L6.5 14.5V5.5Z" fill="currentColor"/>
+                                </svg>
+                            </span>
+                            Watch Demo
+                        </button>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">✅</span>
+                            <span>7-day free trial</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✅</span>
+                            <span>No credit card required</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✅</span>
+                            <span>Cancel anytime</span>
+                        </div>
+                    </div>
+                    <div class="trust-indicators">
+                        <p class="trust-text">Trusted by industry leaders:</p>
+                        <div class="company-logos" role="img" aria-label="Trusted company logos">
+                            <div class="company-logo">
+                                <svg width="120" height="40" viewBox="0 0 120 40">
+                                    <rect width="120" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+                                    <text x="60" y="25" text-anchor="middle" fill="#64748b" font-size="14" font-weight="600">TechCorp</text>
+                                </svg>
+                            </div>
+                            <div class="company-logo">
+                                <svg width="120" height="40" viewBox="0 0 120 40">
+                                    <rect width="120" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+                                    <text x="60" y="25" text-anchor="middle" fill="#64748b" font-size="14" font-weight="600">SalesForce</text>
+                                </svg>
+                            </div>
+                            <div class="company-logo">
+                                <svg width="120" height="40" viewBox="0 0 120 40">
+                                    <rect width="120" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+                                    <text x="60" y="25" text-anchor="middle" fill="#64748b" font-size="14" font-weight="600">StartupX</text>
+                                </svg>
+                            </div>
+                            <div class="company-logo">
+                                <svg width="120" height="40" viewBox="0 0 120 40">
+                                    <rect width="120" height="40" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+                                    <text x="60" y="25" text-anchor="middle" fill="#64748b" font-size="14" font-weight="600">GrowthCo</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-dashboard">
+                        <div class="dashboard-container">
+                            <div class="dashboard-header">
+                                <div class="dashboard-title">AI Sales Dashboard</div>
+                                <div class="dashboard-status">
+                                    <span class="status-dot"></span>
+                                    <span>Live</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-content">
+                                <div class="metric-card">
+                                    <div class="metric-label">Revenue Growth</div>
+                                    <div class="metric-value">+347%</div>
+                                    <div class="metric-chart">
+                                        <svg width="80" height="40" viewBox="0 0 80 40">
+                                            <path d="M5 35 L20 25 L35 15 L50 10 L65 5 L75 2" stroke="#10b981" stroke-width="2" fill="none"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Conversion Rate</div>
+                                    <div class="metric-value">94.2%</div>
+                                    <div class="metric-progress">
+                                        <div class="progress-bar" style="width: 94.2%"></div>
+                                    </div>
+                                </div>
+                                <div class="metric-card">
+                                    <div class="metric-label">Active Campaigns</div>
+                                    <div class="metric-value">12</div>
+                                    <div class="metric-indicator">+3 this week</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-card revenue-card" data-aos="fade-up" data-aos-delay="400">
+                                <div class="card-header">
+                                    <span class="card-icon">💰</span>
+                                    <span class="card-title">Revenue Boost</span>
+                                </div>
+                                <div class="card-value">$127,500</div>
+                                <div class="card-subtitle">This month</div>
+                            </div>
+                            <div class="floating-card conversion-card" data-aos="fade-up" data-aos-delay="500">
+                                <div class="card-header">
+                                    <span class="card-icon">🎯</span>
+                                    <span class="card-title">Conversion Rate</span>
+                                </div>
+                                <div class="card-value">94.2%</div>
+                                <div class="card-subtitle">+12% vs last month</div>
+                            </div>
+                            <div class="floating-card time-card" data-aos="fade-up" data-aos-delay="600">
+                                <div class="card-header">
+                                    <span class="card-icon">⚡</span>
+                                    <span class="card-title">Time Saved</span>
+                                </div>
+                                <div class="card-value">15hrs</div>
+                                <div class="card-subtitle">Per week</div>
+                            </div>
+                        </div>
+                        <div class="hero-particles">
+                            <div class="particle particle-1"></div>
+                            <div class="particle particle-2"></div>
+                            <div class="particle particle-3"></div>
+                            <div class="particle particle-4"></div>
+                            <div class="particle particle-5"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="pricing" class="pricing">
+        <!-- Features Section -->
+        <section id="features" class="features-section" aria-labelledby="features-title">
             <div class="container">
-                <h2 class="section-title">Choose Your Plan</h2>
-                
-                <div class="pricing-cards">
-                    <!-- Best Value Plan -->
-                    <div class="pricing-card featured">
-                        <div class="badge">Best Value</div>
-                        <h3>FULL ACCESS TO ALL AI TOOLS + AI PROMPTS</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">150</span>
+                <div class="section-header">
+                    <h2 id="features-title" class="section-title">Powerful Features That Drive Results</h2>
+                    <p class="section-subtitle">Everything you need to transform your sales process and accelerate business growth</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="12" fill="#3B82F6" fill-opacity="0.1"/>
+                                <path d="M24 12C29.5228 12 34 16.4772 34 22C34 27.5228 29.5228 32 24 32C18.4772 32 14 27.5228 14 22C14 16.4772 18.4772 12 24 12Z" stroke="#3B82F6" stroke-width="2"/>
+                                <path d="M24 18V26M20 22H28" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
                         </div>
-                        <div class="features">
-                            <p>Full access to all current & FUTURE Ventaro AI Tools + Prompts!</p>
-                            <p>Valid until canceled</p>
-                            <ul>
-                                <li>300x AI Prompts Mega-Bundle</li>
-                                <li>AI Sales Pro 4.0</li>
-                                <li>Priority Support</li>
+                        <h3 class="feature-title">300+ AI Prompts</h3>
+                        <p class="feature-description">Ready-to-use AI prompts for sales, marketing, and business automation. Tested and optimized for maximum conversion.</p>
+                        <ul class="feature-list">
+                            <li>Sales email templates</li>
+                            <li>Social media content</li>
+                            <li>Lead qualification scripts</li>
+                            <li>Customer service responses</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="12" fill="#10B981" fill-opacity="0.1"/>
+                                <path d="M14 24L20 30L34 16" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">AI Sales Pro 4.0</h3>
+                        <p class="feature-description">Advanced AI-powered sales automation platform that handles lead generation, nurturing, and conversion automatically.</p>
+                        <ul class="feature-list">
+                            <li>Automated lead scoring</li>
+                            <li>Personalized outreach</li>
+                            <li>Pipeline management</li>
+                            <li>Performance analytics</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="12" fill="#F59E0B" fill-opacity="0.1"/>
+                                <path d="M24 14V34M14 24H34" stroke="#F59E0B" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Expert Coaching</h3>
+                        <p class="feature-description">One-on-one coaching sessions with industry experts to accelerate your growth and overcome specific challenges.</p>
+                        <ul class="feature-list">
+                            <li>Weekly strategy sessions</li>
+                            <li>Personalized action plans</li>
+                            <li>Performance reviews</li>
+                            <li>24/7 support access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="pricing-title" class="section-title">Choose Your Success Plan</h2>
+                    <p class="section-subtitle">Start your transformation today with our proven systems and expert guidance</p>
+                </div>
+                
+                <div class="pricing-toggle" role="tablist" aria-label="Pricing options">
+                    <button class="toggle-btn active" role="tab" aria-selected="true" aria-controls="monthly-pricing" id="monthly-tab" onclick="togglePricing('monthly')">Monthly</button>
+                    <button class="toggle-btn" role="tab" aria-selected="false" aria-controls="annual-pricing" id="annual-tab" onclick="togglePricing('annual')">Annual <span class="discount-badge">Save 20%</span></button>
+                </div>
+                
+                <div class="pricing-cards" id="monthly-pricing" role="tabpanel" aria-labelledby="monthly-tab">
+                    <div class="pricing-card starter" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-header">
+                            <h3 class="plan-name">AI Prompts Starter</h3>
+                            <div class="price-container">
+                                <span class="currency">$</span>
+                                <span class="price monthly-price">97</span>
+                                <span class="price annual-price hidden">77</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p class="plan-description">Perfect for entrepreneurs getting started with AI</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list" role="list">
+                                <li role="listitem"><span class="check-icon">✓</span>300+ AI Prompts Library</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Instant Download Access</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Lifetime Updates</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Email Support</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Mobile App Access</li>
                             </ul>
                         </div>
-                        <a href="#" class="btn btn-primary">Get Full Access</a>
+                        <div class="card-footer">
+                            <button class="btn btn-outline" onclick="selectPlan('starter')" aria-describedby="starter-plan-desc">
+                                Start Free Trial
+                            </button>
+                            <p id="starter-plan-desc" class="trial-info">7-day free trial • No credit card required</p>
+                        </div>
                     </div>
-
-                    <!-- Limited Time Offer -->
-                    <div class="pricing-card">
-                        <div class="badge limited">60% Off</div>
-                        <h3>300x AI Prompts - Introductory Offer</h3>
-                        <div class="price">
-                            <span class="currency">$</span>
-                            <span class="amount">24</span>
+                    
+                    <div class="pricing-card professional featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="popular-badge" role="img" aria-label="Most popular plan">
+                            <span class="badge-icon">🔥</span>
+                            Most Popular
                         </div>
-                        <div class="features">
-                            <p>Just $24 For Full Access To 300x AI Prompts Designed To Help You Earn A Living Online & Become A Master At Closing Deals!</p>
-                            <p class="expiry">Expires By COB August 1st 2025</p>
-                            <p class="note">Until The End Of July Only!</p>
+                        <div class="card-header">
+                            <h3 class="plan-name">AI Sales Pro 4.0</h3>
+                            <div class="price-container">
+                                <span class="currency">$</span>
+                                <span class="price monthly-price">497</span>
+                                <span class="price annual-price hidden">397</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p class="plan-description">Complete AI-powered sales automation platform</p>
                         </div>
-                        <a href="#" class="btn btn-secondary">Claim Offer</a>
+                        <div class="card-body">
+                            <ul class="features-list" role="list">
+                                <li role="listitem"><span class="check-icon">✓</span>Everything in Starter Plan</li>
+                                <li role="listitem"><span class="check-icon">✓</span>AI Sales Automation Suite</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Advanced Lead Generation</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Real-time Analytics Dashboard</li>
+                                <li role="listitem"><span class="check-icon">✓</span>CRM Integration</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Priority Support (24/7)</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Custom AI Training</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary" onclick="selectPlan('professional')" aria-describedby="pro-plan-desc">
+                                <span class="btn-icon">🚀</span>
+                                Start Free Trial
+                            </button>
+                            <p id="pro-plan-desc" class="trial-info">14-day free trial • Cancel anytime</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card enterprise" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-header">
+                            <h3 class="plan-name">Enterprise Coaching</h3>
+                            <div class="price-container">
+                                <span class="currency">$</span>
+                                <span class="price monthly-price">997</span>
+                                <span class="price annual-price hidden">797</span>
+                                <span class="period">/month</span>
+                            </div>
+                            <p class="plan-description">1-on-1 coaching with industry experts</p>
+                        </div>
+                        <div class="card-body">
+                            <ul class="features-list" role="list">
+                                <li role="listitem"><span class="check-icon">✓</span>Everything in Pro Plan</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Weekly 1-on-1 Coaching Sessions</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Personalized Growth Strategy</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Direct Expert Access</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Custom Implementation Plan</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Performance Tracking & Reviews</li>
+                                <li role="listitem"><span class="check-icon">✓</span>Unlimited Support</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary" onclick="selectPlan('enterprise')" aria-describedby="enterprise-plan-desc">
+                                Schedule Consultation
+                            </button>
+                            <p id="enterprise-plan-desc" class="trial-info">Free strategy session • Custom pricing available</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pricing-guarantee" role="region" aria-labelledby="guarantee-title">
+                    <div class="guarantee-content">
+                        <div class="guarantee-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="20" fill="#10B981" fill-opacity="0.1"/>
+                                <path d="M16 24L22 30L32 18" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="guarantee-text">
+                            <h3 id="guarantee-title">30-Day Money-Back Guarantee</h3>
+                            <p>Try our platform risk-free. If you're not completely satisfied within 30 days, we'll refund every penny. No questions asked.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -114,45 +511,394 @@
             </div>
         </section>
 
-        <section id="cta" class="cta-section">
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials" aria-labelledby="testimonials-title">
             <div class="container">
-                <h2>Ready to Transform Your Sales?</h2>
-                <p>Join thousands of entrepreneurs and sales professionals who trust Ventaro Sales</p>
-                <div class="cta-buttons">
-                    <a href="#coaching" class="btn btn-primary">Book Coaching Call</a>
-                    <a href="#blog" class="btn btn-outline">Read Our Blog</a>
+                <div class="section-header">
+                    <h2 id="testimonials-title">What Our Customers Say</h2>
+                    <p class="section-subtitle">Join thousands of entrepreneurs who've transformed their sales with our AI tools</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-content">
+                            <div class="stars" role="img" aria-label="5 star rating">
+                                <span>★★★★★</span>
+                            </div>
+                            <blockquote>
+                                "The AI Sales Pro 4.0 completely transformed my business. I went from struggling to close deals to generating $50K in monthly revenue within 3 months. The automation features are incredible!"
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23667eea'/%3E%3Ctext x='30' y='35' text-anchor='middle' fill='white' font-size='20' font-family='Arial'%3ESM%3C/text%3E%3C/svg%3E" alt="Sarah Martinez" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Sarah Martinez</h4>
+                                <p>E-commerce Entrepreneur</p>
+                                <div class="author-stats">
+                                    <span class="stat">$50K/month revenue</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-content">
+                            <div class="stars" role="img" aria-label="5 star rating">
+                                <span>★★★★★</span>
+                            </div>
+                            <blockquote>
+                                "The AI prompts library is pure gold. I've saved 20+ hours per week on content creation and my conversion rates have doubled. Best investment I've made for my agency."
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%2348bb78'/%3E%3Ctext x='30' y='35' text-anchor='middle' fill='white' font-size='20' font-family='Arial'%3EMJ%3C/text%3E%3C/svg%3E" alt="Michael Johnson" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Michael Johnson</h4>
+                                <p>Digital Marketing Agency Owner</p>
+                                <div class="author-stats">
+                                    <span class="stat">200% conversion increase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="testimonial-content">
+                            <div class="stars" role="img" aria-label="5 star rating">
+                                <span>★★★★★</span>
+                            </div>
+                            <blockquote>
+                                "The coaching program is exceptional. My coach helped me develop a personalized strategy that increased my close rate from 15% to 65%. The ROI is incredible!"
+                            </blockquote>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='30' fill='%23f093fb'/%3E%3Ctext x='30' y='35' text-anchor='middle' fill='white' font-size='20' font-family='Arial'%3ELT%3C/text%3E%3C/svg%3E" alt="Lisa Thompson" class="author-avatar">
+                            <div class="author-info">
+                                <h4>Lisa Thompson</h4>
+                                <p>SaaS Sales Director</p>
+                                <div class="author-stats">
+                                    <span class="stat">65% close rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <div class="proof-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10,000+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">$50M+</div>
+                            <div class="stat-label">Revenue Generated</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfaction Rate</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4.9/5</div>
+                            <div class="stat-label">Average Rating</div>
+                        </div>
+                    </div>
+                    
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#10B981"/>
+                                <path d="M12 20L18 26L28 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span>SSL Secured</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#3B82F6"/>
+                                <path d="M20 8L24 16H32L26 22L28 30L20 26L12 30L14 22L8 16H16L20 8Z" fill="white"/>
+                            </svg>
+                            <span>Award Winning</span>
+                        </div>
+                        <div class="badge-item">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="8" fill="#8B5CF6"/>
+                                <path d="M20 12C16.69 12 14 14.69 14 18V22C14 25.31 16.69 28 20 28C23.31 28 26 25.31 26 22V18C26 14.69 23.31 12 20 12Z" fill="white"/>
+                            </svg>
+                            <span>GDPR Compliant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-badge">
+                        <span class="badge-icon">🚀</span>
+                        <span>Limited Time Offer</span>
+                    </div>
+                    
+                    <h2 id="cta-title" class="cta-title">
+                        Ready to <span class="highlight">10X Your Sales</span> with AI?
+                    </h2>
+                    
+                    <p class="cta-description">
+                        Join over 10,000 entrepreneurs who've transformed their businesses with our AI-powered sales tools. 
+                        Start your free trial today and see results in 24 hours.
+                    </p>
+                    
+                    <div class="cta-stats">
+                        <div class="stat">
+                            <span class="stat-number">300%</span>
+                            <span class="stat-label">Average Revenue Increase</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24hrs</span>
+                            <span class="stat-label">Time to First Results</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Customer Success Rate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-large" onclick="startFreeTrial()" aria-describedby="trial-benefits">
+                            <span class="btn-icon">🎯</span>
+                            Start Free Trial
+                            <span class="btn-subtitle">No Credit Card Required</span>
+                        </button>
+                        
+                        <button class="btn btn-secondary btn-large" onclick="scheduleDemo()">
+                            <span class="btn-icon">📞</span>
+                            Schedule Demo
+                            <span class="btn-subtitle">Talk to an Expert</span>
+                        </button>
+                    </div>
+                    
+                    <div id="trial-benefits" class="trial-benefits">
+                        <div class="benefit">
+                            <span class="check-icon">✓</span>
+                            <span>14-day free trial</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check-icon">✓</span>
+                            <span>Cancel anytime</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check-icon">✓</span>
+                            <span>Full access to all features</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="check-icon">✓</span>
+                            <span>24/7 support included</span>
+                        </div>
+                    </div>
+                    
+                    <div class="urgency-timer">
+                        <div class="timer-label">Special offer ends in:</div>
+                        <div class="countdown-timer" id="countdown-timer">
+                            <div class="time-unit">
+                                <span class="time-value" id="days">07</span>
+                                <span class="time-label">Days</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="hours">23</span>
+                                <span class="time-label">Hours</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="minutes">59</span>
+                                <span class="time-label">Minutes</span>
+                            </div>
+                            <div class="time-unit">
+                                <span class="time-value" id="seconds">45</span>
+                                <span class="time-label">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-visual">
+                    <div class="floating-elements">
+                        <div class="floating-card revenue-card">
+                            <div class="card-icon">💰</div>
+                            <div class="card-content">
+                                <div class="card-title">Revenue Growth</div>
+                                <div class="card-value">+$50K/month</div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card conversion-card">
+                            <div class="card-icon">📈</div>
+                            <div class="card-content">
+                                <div class="card-title">Conversion Rate</div>
+                                <div class="card-value">+300%</div>
+                            </div>
+                        </div>
+                        
+                        <div class="floating-card time-card">
+                            <div class="card-icon">⏰</div>
+                            <div class="card-content">
+                                <div class="card-title">Time Saved</div>
+                                <div class="card-value">20+ hrs/week</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ventaro Sales</h3>
-                    <p>The Best Online Platform For Entrepreneurs & Sales Professionals</p>
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="40" height="40" rx="8" fill="url(#footerGradient)"/>
+                            <path d="M12 28L20 12L28 28H24L22 24H18L16 28H12ZM19 18L17.5 21H22.5L21 18H19Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footerGradient" x1="0" y1="0" x2="40" y2="40">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>Ventaro Sales</span>
+                    </div>
+                    <p class="footer-description">
+                        Empowering entrepreneurs worldwide with cutting-edge AI sales tools and expert coaching. 
+                        Transform your business with proven strategies that deliver results.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Twitter" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on LinkedIn" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Facebook" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Subscribe to our YouTube channel" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#ai-prompts-business">AI Prompts (Business)</a></li>
-                        <li><a href="#ai-prompts-sales">AI Prompts (Sales)</a></li>
-                        <li><a href="#ai-sales-pro">AI-Sales Pro 4.0</a></li>
-                        <li><a href="#coaching">Coaching Calls</a></li>
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#ai-prompts">AI Prompts Library</a></li>
+                        <li><a href="#ai-sales-pro">AI Sales Pro 4.0</a></li>
+                        <li><a href="#coaching">Expert Coaching</a></li>
+                        <li><a href="#enterprise">Enterprise Solutions</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Resources</h4>
-                    <ul>
+                    <ul class="footer-links">
                         <li><a href="#blog">Blog</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#case-studies">Case Studies</a></li>
+                        <li><a href="#webinars">Webinars</a></li>
+                        <li><a href="#templates">Free Templates</a></li>
+                        <li><a href="#roi-calculator">ROI Calculator</a></li>
+                        <li><a href="#help-center">Help Center</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press Kit</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#affiliate">Affiliate Program</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section footer-contact">
+                    <h4>Get in Touch</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <a href="mailto:hello@ventarosales.com">hello@ventarosales.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <a href="tel:+1-555-123-4567">+1 (555) 123-4567</a>
+                        </div>
+                        <div class="contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span>San Francisco, CA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="newsletter-signup">
+                        <h5>Stay Updated</h5>
+                        <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+                            <input type="email" placeholder="Enter your email" required aria-label="Email address for newsletter">
+                            <button type="submit" aria-label="Subscribe to newsletter">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                            </button>
+                        </form>
+                        <p class="newsletter-note">Get weekly tips and exclusive offers</p>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2024 Ventaro Sales. All rights reserved.</p>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Ventaro Sales. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                        <a href="#gdpr">GDPR</a>
+                    </div>
+                </div>
+                
+                <div class="footer-certifications">
+                    <div class="cert-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                        </svg>
+                        <span>SSL Secured</span>
+                    </div>
+                    <div class="cert-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>GDPR Compliant</span>
+                    </div>
+                    <div class="cert-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <span>Award Winning</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
